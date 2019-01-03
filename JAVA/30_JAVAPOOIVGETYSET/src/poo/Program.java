@@ -4,7 +4,7 @@ package poo;
 public class Program {
 
 	public static void main(String[] args) {//ak es donde se inicia todo programa java
-		// TODO Auto-generated method stub
+		
        //solo es visible y modificable desde la propia clase
 		coche renault=new coche();//instancia un aclase
 		
