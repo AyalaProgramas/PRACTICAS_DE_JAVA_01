@@ -1,5 +1,7 @@
 package poo;
+import javax.swing.*;
 
+//pauqete java lan
 public class Program {
 
 	public static void main(String[] args) {//ak es donde se inicia todo programa java
@@ -33,6 +35,22 @@ public class Program {
 		
 		renault.configura_asiento("no");
 		System.out.println(renault.dime_asiento());
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		//32
+		//hacmos el programa para que salga de una ventana emergente esto lo hacemos de forma elegante
+		//
+		renault.establece_color(JOptionPane.showInputDialog("introduce color"));
+		System.out.println(renault.dime_color());
+		renault.configura_asiento(JOptionPane.showInputDialog("tiene asiento de cuero?"));
+		System.out.println(renault.dime_asiento());
+		renault.configura_climatisador(JOptionPane.showInputDialog("tiene climatisador?"));
+		System.out.println(renault.dime_clima());
+	//uso de equals
 	}
 
 }

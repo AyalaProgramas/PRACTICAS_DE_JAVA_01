@@ -51,9 +51,9 @@ public class coche {
 	}
 	//this: hace referencia a la propia clase que estamos en la variable de la clase
 	
-	public void configura_asiento(String asiento_cuero)
+	public void configura_asiento(String asiento_cuero)//seter
 	{
-		if(asiento_cuero=="si")//usar equals
+		if(asiento_cuero.equals("si"))//usar equals
 		{
 			this.asiento_decuero=true;
 		}else
@@ -63,7 +63,7 @@ public class coche {
 		
 	}
 	
-	public String dime_asiento()
+	public String dime_asiento()//geter
 	{
 		String retorno="";
 		if(this.asiento_decuero==true)
@@ -76,6 +76,70 @@ public class coche {
 		
 		return retorno;
 	}
+	
+	
+	public void configura_climatisador(String climatisador)//seter
+	{
+		if(climatisador.equals("si"))
+		{
+			this.climatisador=true;
+			
+		}else
+		{
+			this.climatisador=false;
+			
+		}
+	}
+	
+	public String dime_clima()//geter
+	{
+		String retorno="";
+		if(this.climatisador==true)
+		{
+			retorno="el coche tiene climatisado";
+		}
+		else
+		{
+			retorno="el coche no tiene climatisador";
+		}
+		return retorno;
+	}
+	
+	//no reconmendado haqcer seter y geter juntos
+	
+	public String peso_coche()
+	{
+		int peso_carroceria=500;
+		
+		this.peso_total=this.peso_plataforma+peso_carroceria;
+		if(this.asiento_decuero==true)
+		{
+			this.peso_total=this.peso_total+50;
+		}
+		if(this.climatisador==true)
+		{
+			this.peso_total=this.peso_total+20;
+		}
+		
+		return "el peso del coche es"+ this.peso_total;
+	}
+	
+	//11:32
+	
+	
+	public int precio_coche()//geter
+	{
+		int precio_final=10000;
+		if(this.asiento_decuero==true)
+			precio_final+=2000;
+		if(this.climatisador==true)
+		{
+			precio_final+=1500;
+		}
+		return precio_final;
+	}
+	
+	
 	
 	
 }
